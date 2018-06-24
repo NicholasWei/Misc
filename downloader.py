@@ -9,9 +9,7 @@ file = open('todo', 'r')
 ssl._create_default_https_context = ssl._create_unverified_context
 for line in file:
     todownload = prefix % line
-    print(todownload)
-    print(line)
-    #urllib.request.urlretrieve(todownload, line)
+    urllib.request.urlretrieve(todownload, line)
 
 file.close()
 
